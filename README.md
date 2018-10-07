@@ -1,5 +1,5 @@
 
-<img src="doc/neos.png" alt="Neos logo" height="100" width="250" />
+<img src="doc/neos.png" alt="Neos logo" height="100" width="270" />
 
 Neos is an Android Project uses [Google News API](https://newsapi.org), it displays all news that published by US Today in English.
 
@@ -39,4 +39,4 @@ The code above initiates the mainView and initiates all actions, then get favori
 
 Note that there are three kinds of items are displayed in the main screen, one for the favorite articles, one for the article of headlines, and the last one is the item of section which appears each day, to separate between days and each other.
 
-<img src="doc/Screenshot.png" alt="Screenshot" height="60" width="40" />
+<img src="doc/Screenshot.png" alt="Screenshot" height="600" width="400" />
