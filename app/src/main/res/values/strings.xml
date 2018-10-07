@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Neos</string>
+    <string name="favorite">Favorite</string>
+    <string name="categories">Categories</string>
+    <string name="headlines">Headlines</string>
+    <string name="date_date">date/date</string>
+    <string name="news_headline">News headline</string>
+    <string name="news_author">news_author</string>
+    <string name="date">Date</string>
+</resources>
