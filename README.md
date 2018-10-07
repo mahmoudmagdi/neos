@@ -1,5 +1,5 @@
 
-<img src="doc/neos.png" alt="Neos logo" height="101" width="220" />
+<img src="doc/neos.png" alt="Neos logo" height="100" width="250" />
 
 Neos is an Android Project uses [Google News API](https://newsapi.org), it displays all news that published by US Today in English.
 
