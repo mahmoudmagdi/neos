@@ -3,31 +3,16 @@ package com.khlafawi.neos.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.Date;
 
 public class ArticleClass implements Parcelable {
 
-    @SerializedName("author")
     private String author;
-
-    @SerializedName("title")
     private String title;
-
-    @SerializedName("description")
     private String description;
-
-    @SerializedName("url")
     private String url;
-
-    @SerializedName("urlToImage")
     private String urlToImage;
-
-    @SerializedName("publishedAt")
     private Date publishedAt;
-
-    @SerializedName("content")
     private String content;
 
     public String getAuthor() {
@@ -92,7 +77,6 @@ public class ArticleClass implements Parcelable {
         description = in.readString();
         url = in.readString();
         urlToImage = in.readString();
-        //publishedAt = in.readString();
         content = in.readString();
     }
 

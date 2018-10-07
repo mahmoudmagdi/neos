@@ -34,10 +34,7 @@ import static android.view.View.VISIBLE;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView side_menu;
     private ImageView logo;
-    private ImageView favorite;
-    private ImageView search;
 
     private LinearLayout favorite_linear_layout;
     private RecyclerView favorite_recycler_view;
@@ -56,45 +53,20 @@ public class MainActivity extends AppCompatActivity {
         initView();
         initActions();
         getFavorites();
-        getCategories();
         getTodayNews();
     }
 
     private void initView() {
-        this.side_menu = findViewById(R.id.side_menu);
         this.logo = findViewById(R.id.logo);
-        this.favorite = findViewById(R.id.favorite);
-        this.search = findViewById(R.id.search);
-
         this.favorite_linear_layout = findViewById(R.id.favorite_linear_layout);
-
         this.favorite_recycler_view = findViewById(R.id.favorite_recycler_view);
-        //this.categories_recycler_view = findViewById(R.id.categories_recycler_view);
         this.today_recycler_view = findViewById(R.id.today_recycler_view);
 
         favDB = new FavoriteDB(MainActivity.this);
     }
 
     private void initActions() {
-        this.side_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
         this.logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        this.favorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        this.search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -102,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void getFavorites() {
+    public void getFavorites() {
         LinearLayoutManager favoriteLinearLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         favoriteAdapter = new FavoriteAdapter(MainActivity.this);
         FavoriteDB favDB = new FavoriteDB(MainActivity.this);
@@ -112,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
             favorite_recycler_view.setLayoutManager(favoriteLinearLayoutManager);
             favorite_recycler_view.setAdapter(favoriteAdapter);
         }
-    }
-
-    private void getCategories() {
-
     }
 
     private void getTodayNews() {

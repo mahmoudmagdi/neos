@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.khlafawi.neos.MainActivity;
 import com.khlafawi.neos.R;
 import com.khlafawi.neos.model.ArticleClass;
 import com.khlafawi.neos.provider.ArticleContract;
@@ -86,8 +86,7 @@ public class DaySection extends StatelessSection {
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Added to Fav.", Toast.LENGTH_LONG).show();
-
+                ((MainActivity) context).getFavorites();
                 if (favDB.CheckIsDataAlreadyInDBorNot(ArticleContract.ArticleEntry.COLUMN_TITLE, article.getTitle())) {
                     ContentResolver cr = context.getContentResolver();
                     cr.delete(ArticleContract.ArticleEntry.CONTENT_URI, ArticleContract.ArticleEntry.COLUMN_TITLE + " = ?", new String[]{article.getTitle()});
@@ -109,6 +108,10 @@ public class DaySection extends StatelessSection {
                 }
             }
         });
+
+        if (favDB.CheckIsDataAlreadyInDBorNot(ArticleContract.ArticleEntry.COLUMN_TITLE, article.getTitle())) {
+            holder.like.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_fav_checked));
+        }
 
         holder.body.setOnClickListener(new View.OnClickListener() {
             @Override
