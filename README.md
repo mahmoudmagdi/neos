@@ -39,4 +39,4 @@ The code above initiates the mainView and initiates all actions, then get favori
 
 Note that there are three kinds of items are displayed in the main screen, one for the favorite articles, one for the article of headlines, and the last one is the item of section which appears each day, to separate between days and each other.
 
-<img src="doc/Screenshot.png" alt="Screenshot" height="600" width="400" />
+<img src="doc/Screenshot.png" alt="Screenshot" height="1000" width="400" />
